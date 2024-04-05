@@ -13,8 +13,8 @@ This solution contains a JS function that takes an array of numbers as input and
 ## Program setup
 1. Create a new repository on GitHub
 2. Navigate to the folder you want to work on through the terminal 
-3. Write the command **git clone https://github.com/amandasuzzanne/SA.02-WK2-Code-Challenge.git** to clone the repository to your local machine
+3. Write the command **`git clone https://github.com/amandasuzzanne/SA.02-WK2-Code-Challenge.git`** to clone the repository to your local machine
 4. Launch VS Code editor (or any other code editor) by writing the command code .
 5. Open the specific file you want to run in the browser
-6. Ensure that the **Go Live extension** is installed in your VS Code editor
+6. Ensure that the **`Go Live extension`** is installed in your VS Code editor
 7. Run the live server by clicking the Go Live extension icon
