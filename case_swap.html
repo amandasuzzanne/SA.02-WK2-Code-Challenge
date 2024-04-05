@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Swap</title>
+</head>
+<body>
+    <script>
+        function swap(string) {
+            // Empty string to add characters
+            let letters = '';
+
+            for (let i = 0; i < string.length; i++) {
+                let character = string.charAt(i);
+
+                // Change to lower case 
+                if (character === character.toUpperCase()) {
+                    letters += character.toLowerCase();
+                }
+                // Change to upper case 
+                else {
+                    letters += character.toUpperCase();
+                }
+            }
+            return letters;
+        }
+
+        // Main function to execute the program
+        function main() {
+            // Prompting the user to input a string
+            const inputString = prompt("Enter a string:");
+
+            // Call the swap function with the user input
+            const result = swap(inputString);
+
+            // Display the result
+            // alert("Swapped case string: " + result);
+            if (result.length > 0) {
+                document.write("Swapped case string: " + result);
+            }  else {
+                document.write("You must enter a string");
+            }
+        }
+
+        // Call the main function after the DOM is loaded
+        main();
+    </script>
+</body>
+</html>
