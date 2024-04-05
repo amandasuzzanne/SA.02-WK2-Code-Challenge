@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Numbers</title>
+</head>
+
+<body>
+    <script>
+        // Function to determine the prime numbers
+        function prime(num) {
+            // Excluding 1 and negative numbers
+            if (num <= 1) return false;
+            // Checking for 2 & 3
+            if (num <= 3) return true;
+
+            // Eliminating multiples of 2 & 3
+            if (num % 2 === 0 || num % 3 === 0) return false;
+
+            // Looping through potential factors
+            for (let i = 5; i * i <= num; i += 6) {
+                if (num % i === 0 || num % (i + 2) === 0) {
+                    return false;
+                }
+            }
+            return true;
+        }
+        // Function to filter the prime numbers from an array
+        function filterPrime(numbers) {
+            return numbers.filter(prime)
+        }
+
+        // Main function to execute the program
+        function main() {
+            // Prompting the user to input numbers separated by commas
+            const input = prompt("Enter numbers separated by commas:");
+            const numbers = input.split(",").map(Number);
+
+            // Filtering prime numbers
+            const primeNumbers = filterPrime(numbers);
+
+            // Displaying the results
+            if (primeNumbers.length > 0) {
+                document.write("The prime numbers are: " + primeNumbers.join(", "));
+            } else {
+                document.write("There are no prime numbers.");
+            }
+        }
+
+        // Calling the main function to start the program
+        main();
+    </script>
+</body>
+</html>
